@@ -14,8 +14,9 @@ namespace GYM_HCI.Forms
     public partial class Login : Form
     {
         string strConn = Classes.StrConnection.strConn;
-        SqlConnection connection = new SqlConnection(strConn);
-
+        SqlConnection connection = new SqlConnection(Classes.StrConnection.strConn);
+        int a = 0;
+        static public string LoginInfo = "";
         public int LoginUser()
         {
             int TypeOfUser = cbTypeOfUser.SelectedIndex;
@@ -41,8 +42,8 @@ namespace GYM_HCI.Forms
         }
         public void logins()
         {
-            
-            string sqlCommand = "select [Администратор] from [Данные авторизации] where [Логин] = '" + textBox1.Text + "' and [Пароль] = '" + textBox2.Text + "'";
+            connection.Open();
+            string sqlCommand = "select [Тип пользователя] from [Данные авторизации] where [Логин] = '" + tbLogin.Text + "' and [Пароль] = '" + tbPass.Text + "'";
             using (SqlConnection connection = new SqlConnection(strConn));
             SqlCommand command = new SqlCommand(sqlCommand,     connection);
             SqlDataReader reader = command.ExecuteReader();
@@ -51,31 +52,64 @@ namespace GYM_HCI.Forms
 
                 while (reader.Read())
                 {
-                    if (reader.GetBoolean(0) == true)
-                        a = 1;
+                    a = reader.GetInt32(0);
+                      
                 }
             }
-            int c = countLogins() + a;
+            int c = LoginUser() + a;
             if (c == 1)
             {
-                loginkrutoi228 = textBox1.Text;
-                Lichka newForm = new Lichka();
+                LoginInfo = tbLogin.Text;
+                UserForm newForm = new UserForm();
+                newForm.Show();
+                this.Close();
+
+            }
+            else 
+                if (c == 2)
+            {
+                LoginInfo = tbLogin.Text;
+                TrainerForm newForm = new TrainerForm();
                 newForm.Show();
                 this.Close();
 
             }
             else
-                if (c == 2)
+                if (c == 3)
             {
-                loginkrutoi228 = textBox1.Text;
-                LichkaAdmin newForm = new LichkaAdmin();
+                LoginInfo = tbLogin.Text;
+                AdminForm newForm = new AdminForm();
                 newForm.Show();
                 this.Close();
+            }
+            else
+                
+            {
+                MessageBox.Show("Введите корректные данные");
+                return;
             }
         }
         public Login()
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (tbLogin.Text == "")
+            {
+                MessageBox.Show("Введите логин");
+                return;
+            }
+            if (tbPass.Text == "")
+            {
+                MessageBox.Show("Введите пароль");
+                return;
+            }
+
+            logins();
+
+        }
     }
+    
 }

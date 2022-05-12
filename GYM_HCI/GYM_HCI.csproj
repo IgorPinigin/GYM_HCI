@@ -47,11 +47,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\StrConnection.cs" />
+    <Compile Include="Forms\AbonementsInfoForAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AbonementsInfoForAdmin.Designer.cs">
+      <DependentUpon>AbonementsInfoForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AbonementsInfoForUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AbonementsInfoForUser.Designer.cs">
+      <DependentUpon>AbonementsInfoForUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProgramsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProgramsInfo.Designer.cs">
+      <DependentUpon>ProgramsInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Registrarion.cs">
       <SubType>Form</SubType>
@@ -60,12 +84,71 @@
       <DependentUpon>Registrarion.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Program.cs" />
+    <Compile Include="Forms\TrainerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TrainerForm.Designer.cs">
+      <DependentUpon>TrainerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TrainersInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TrainersInfo.Designer.cs">
+      <DependentUpon>TrainersInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pinigin907aDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pinigin907aDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pinigin907aDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pinigin907aDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pinigin907aDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pinigin907aDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pinigin907aDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pinigin907aDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AbonementsInfoForAdmin.resx">
+      <DependentUpon>AbonementsInfoForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AbonementsInfoForUser.resx">
+      <DependentUpon>AbonementsInfoForUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProgramsInfo.resx">
+      <DependentUpon>ProgramsInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Registrarion.resx">
       <DependentUpon>Registrarion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TrainerForm.resx">
+      <DependentUpon>TrainerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TrainersInfo.resx">
+      <DependentUpon>TrainersInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -76,6 +159,50 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="pinigin907aDataSet.xsc">
+      <DependentUpon>pinigin907aDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pinigin907aDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pinigin907aDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pinigin907aDataSet.xss">
+      <DependentUpon>pinigin907aDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pinigin907aDataSet1.xsc">
+      <DependentUpon>pinigin907aDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pinigin907aDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pinigin907aDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pinigin907aDataSet1.xss">
+      <DependentUpon>pinigin907aDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pinigin907aDataSet2.xsc">
+      <DependentUpon>pinigin907aDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="pinigin907aDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pinigin907aDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pinigin907aDataSet2.xss">
+      <DependentUpon>pinigin907aDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="pinigin907aDataSet3.xsc">
+      <DependentUpon>pinigin907aDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="pinigin907aDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pinigin907aDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pinigin907aDataSet3.xss">
+      <DependentUpon>pinigin907aDataSet3.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

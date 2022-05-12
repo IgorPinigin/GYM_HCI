@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Data.SqlClient;
+using GYM_HCI.Forms;
 
 namespace GYM_HCI
 {
@@ -34,6 +35,13 @@ namespace GYM_HCI
         private void btnRegistration_Click(object sender, EventArgs e)
         {
             insertData();
+        }
+
+        private void btLogin_Click(object sender, EventArgs e)
+        {
+            Login newForm = new Login();
+            newForm.Show();
+            
         }
     }
 }
